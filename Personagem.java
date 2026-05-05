@@ -1,4 +1,4 @@
-//Criação da classe Personagem
+// Representa um personagem do sistema com seus principais atributos.
 public class Personagem {
     String nome;
     String classe;
@@ -6,7 +6,7 @@ public class Personagem {
     int pontosDeVida;
     double poderBase;
 
-    //Criação do método construtor da classe Personagem
+    // Inicializa um personagem com os dados recebidos por parâmetro.
     public Personagem(String nome, String classe, int nivel, int pontosDeVida, double poderBase) {
         this.nome = nome;
         this.classe = classe;
@@ -14,7 +14,8 @@ public class Personagem {
         this.pontosDeVida = pontosDeVida;
         this.poderBase = poderBase;
     }
-    //Criação do método Exibir Status que mostra os atributos do objeto (estado)
+
+    // Exibe no console os atributos que descrevem o estado atual do personagem.
     public void exibirStatus() {
         System.out.println("--- Status do Personagem ---");
         System.out.println("Nome: " + nome);
