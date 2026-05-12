@@ -4,14 +4,20 @@ public class Main {
     public static void main(String[] args) {
 
         // Instancia personagens com dados iniciais para demonstração.
-        Personagem heroi1 = new Personagem("Arthus", "Guerreiro", 1, 100, 10.5);
-        Personagem heroi2 = new Personagem("Merlin", "Mago", 20, 100, 20);
-        Personagem heroi3 = new Personagem("Enéias", "Sábio", 56, 200, 100);
+        Guerreiro guerreiro1 = new Guerreiro("Kratos", 1, 100, 10.5, 30);
+        Mago mago1 = new Mago("Merlin", 20, 100, 20, 20);
+        Guerreiro guerreiro2 = new Guerreiro("Enéias",  56, 200, 100, 10);
 
 
         // Exibe no console o estado atual de cada personagem.
-        heroi1.exibirStatus();
-        heroi2.exibirStatus();
-        heroi3.exibirStatus();
+        guerreiro1.exibirStatus();
+        mago1.exibirStatus();
+        guerreiro2.exibirStatus();
+
+        //Inicia os métodos especiais de cada classe com base no método da superclasse
+        guerreiro1.usarHabilidadeEspecial();
+        mago1.usarHabilidadeEspecial();
+        guerreiro2.usarHabilidadeEspecial();
+
     }
 }

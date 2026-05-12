@@ -1,5 +1,5 @@
 // Representa um personagem do sistema com seus principais atributos.
-public class Personagem {
+public abstract class Personagem {
     String nome;
     String classe;
     int nivel;
@@ -24,5 +24,8 @@ public class Personagem {
         System.out.println("Pontos de Vida: " + pontosDeVida);
         System.out.println("Poder Base: " + poderBase);
     }
+
+    // Cria o método abstrato para ser implementado nas subclasses
+    public abstract void usarHabilidadeEspecial();
 }
 
