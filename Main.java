@@ -19,5 +19,17 @@ public class Main {
         mago1.usarHabilidadeEspecial();
         guerreiro2.usarHabilidadeEspecial();
 
+        //Instanciação de objetos(personagens) em uma estrutura
+
+        Personagem[] herois = new Personagem[4];
+        herois[0] = new Guerreiro("Mario", 8, 100, 100,50);
+        herois[1] = new Mago("Luigi", 6, 100, 80,40);
+        herois[2] = new Guerreiro("Bowser", 10, 50, 100,20);
+        herois[3] = new Mago("Peach", 8, 100, 100,50);
+
+        for (Personagem h : herois){
+            h.exibirStatus();
+            h.usarHabilidadeEspecial();
+        }
     }
 }
