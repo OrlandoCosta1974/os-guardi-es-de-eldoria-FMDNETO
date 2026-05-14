@@ -1,16 +1,20 @@
+// A classe Guerreiro herda da classe Personagem
+// Isso significa que Guerreiro também é um tipo de Personagem
 public class Guerreiro extends Personagem {
-    double forca;
 
-    public Guerreiro(String nome, int nivel, int pontosDeVida, double poderBase, double forca){
+    // Construtor da classe Guerreiro
+    // Ele recebe os dados do guerreiro
+    public Guerreiro(String nome, int nivel, int pontosDeVida, double poderBase) {
+
+        // super chama o construtor da classe Personagem
+        // Aqui definimos automaticamente a classe como "Guerreiro"
         super(nome, "Guerreiro", nivel, pontosDeVida, poderBase);
-        this.forca = forca;
     }
 
+    // Sobrescrita do método usarHabilidade
+    // O Guerreiro terá uma habilidade própria
     @Override
-    public void usarHabilidadeEspecial(){
-        System.out.println("O Guerreiro " + nome + " usou a espada do poder!");
+    public String usarHabilidade() {
+        return getNome() + " realiza um ataque poderoso com sua espada!";
     }
-
-
-
 }

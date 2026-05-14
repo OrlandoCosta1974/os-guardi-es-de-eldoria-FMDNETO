@@ -1,35 +1,34 @@
-// Classe de entrada da aplicação.
+// Classe principal do programa
+// É aqui que o programa começa a executar
 public class Main {
-    // Método principal responsável por iniciar a execução do programa.
+
+    // Método main
+    // É o ponto de entrada do programa Java
     public static void main(String[] args) {
 
-        // Instancia personagens com dados iniciais para demonstração.
-        Guerreiro guerreiro1 = new Guerreiro("Kratos", 1, 100, 10.5, 30);
-        Mago mago1 = new Mago("Merlin", 20, 100, 20, 20);
-        Guerreiro guerreiro2 = new Guerreiro("Enéias",  56, 200, 100, 10);
+        // Criando um personagem do tipo Mago
+        Mago heroi1 = new Mago("Eldoran", 7, 60, 18.0);
 
+        // Criando um personagem do tipo Guerreiro
+        Guerreiro heroi2 = new Guerreiro("Arthus", 1, 100, 10.5);
 
-        // Exibe no console o estado atual de cada personagem.
-        guerreiro1.exibirStatus();
-        mago1.exibirStatus();
-        guerreiro2.exibirStatus();
+        // Exibindo o título do programa
+        System.out.println("=== BEM-VINDOS AO REINO DE ELDORIA ===");
+        System.out.println();
 
-        //Inicia os métodos especiais de cada classe com base no método da superclasse
-        guerreiro1.usarHabilidadeEspecial();
-        mago1.usarHabilidadeEspecial();
-        guerreiro2.usarHabilidadeEspecial();
+        // Exibindo as informações do primeiro herói
+        System.out.println("--- Herói 1 ---");
+        System.out.println(heroi1);
 
-        //Instanciação de objetos(personagens) em uma estrutura
+        // Chamando o método usarHabilidade do Mago
+        System.out.println("Habilidade: " + heroi1.usarHabilidade());
+        System.out.println();
 
-        Personagem[] herois = new Personagem[4];
-        herois[0] = new Guerreiro("Mario", 8, 100, 100,50);
-        herois[1] = new Mago("Luigi", 6, 100, 80,40);
-        herois[2] = new Guerreiro("Bowser", 10, 50, 100,20);
-        herois[3] = new Mago("Peach", 8, 100, 100,50);
+        // Exibindo as informações do segundo herói
+        System.out.println("--- Herói 2 ---");
+        System.out.println(heroi2);
 
-        for (Personagem h : herois){
-            h.exibirStatus();
-            h.usarHabilidadeEspecial();
-        }
+        // Chamando o método usarHabilidade do Guerreiro
+        System.out.println("Habilidade: " + heroi2.usarHabilidade());
     }
 }
